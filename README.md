@@ -1,6 +1,6 @@
 # SchecterGuitarInventory
 
-Project ini bertema tentang inventory sederhana sebuah gudang gitar dan bass dengan merk Schecter. Flow project ini sangat sederhana, yaitu CRUD Category, CRUD Series, CRUD PRODUCT, serta dapat menambah ataupun mengurangi unit stock.
+Project ini bertema tentang inventory sederhana sebuah gudang gitar dan bass dengan merk Schecter. Flow project ini sangat sederhana, yaitu CRUD Category, CRUD Series, CRUD PRODUCT, serta dapat menambah ataupun mengurangi unit stock. Terdapat juga fitur untuk memasukan jumlah barang yang rusak (Reject), sehingga akan mengurangi jumlah stock di produk  yang dituju.
 Database SQL yang digunakan sudah disertakan dalam project ini dengan nama SchecterGuitar.
 Untuk testing, saya menggunakan Aplikasi POSTMAN dengan URL, Method , Parameter, dan Body sebagai berikut :
 
@@ -30,7 +30,7 @@ Body		: 	{
 URL		: http://localhost:8080/category?categoryID=1
 Method	: DELETE
 Parameter	: categoryID
-Body		: 
+Body		: -
 
 5.	Find All Series
 URL		: http://localhost:8080/series
@@ -58,7 +58,7 @@ Body		: 	{
 URL		: http://localhost:8080/ series? series ID=1
 Method	: DELETE
 Parameter	: seriesID
-Body		: 
+Body		: -
 
 9.	Find All Products
 URL		: http://localhost:8080/product
@@ -104,7 +104,7 @@ Body		: 	{
 URL		: http://localhost:8080/product?productID=1
 Method	: DELETE
 Parameter	: productID
-Body		: 
+Body		: -
 
 13.	Stock In
 URL		: http://localhost:8080/product/stock-in?productID=1
@@ -126,18 +126,32 @@ Body		: {
 URL		: http://localhost:8080/product/product-by-category?categoryID=1
 Method	: GET
 Parameter	: categoryID
-Body		:
+Body		: -
 
 16.	Product By Series
 URL		: http://localhost:8080/product/product-by-series?seriesID=1
 Method	: GET
 Parameter	: seriesID
-Body		:
+Body		: -
 
 
 17.	Most Product
 URL		: http://localhost:8080/product/most-product
 Method	: GET
-Parameter	: 
-Body		:
+Parameter	: -
+Body		: -
 
+18.	Rejected Product FInd All
+URL		: http://localhost:8080/reject
+Method	: GET
+Parameter	: -
+Body		: -
+
+19.	Rejected Product Insert
+URL		: http://localhost:8080/reject
+Method	: POST
+Parameter	: -
+Body		: {
+               "productID" : 1
+               "units" : 2
+            }
