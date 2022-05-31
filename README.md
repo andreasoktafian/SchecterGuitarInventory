@@ -1,7 +1,7 @@
 # SchecterGuitarInventory
 
 Project ini bertema tentang inventory sederhana sebuah gudang gitar dan bass dengan merk Schecter. Flow project ini sangat sederhana, yaitu CRUD Category, CRUD Series, CRUD PRODUCT, serta dapat menambah ataupun mengurangi unit stock.
-Database SQL yang digunakan sudah disertakan dalam project ini dengan nama SchecterGuitarInventory.
+Database SQL yang digunakan sudah disertakan dalam project ini dengan nama SchecterGuitar.
 Untuk testing, saya menggunakan Aplikasi POSTMAN dengan URL, Method , Parameter, dan Body sebagai berikut :
 
 1.	Find All Category
